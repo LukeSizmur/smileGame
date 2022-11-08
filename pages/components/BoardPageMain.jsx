@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import BoardPageButton from './BoardPageButton'
+import BoardPageApi from './BoardPageApi';
 
 export default function BoardPageMain() {
     return (
@@ -39,6 +40,7 @@ export default function BoardPageMain() {
                 <section className='text-center '>
                     {/* TODO: add the image from the API */}
                     <h1>PLACE IMAGE HERE</h1>
+                    <BoardPageApi />
                 </section>
             </div>
             {/* column 3 */}
@@ -60,7 +62,6 @@ export default function BoardPageMain() {
             <div className='text-center'>
                 
             </div>
-            
         </div>
         
     )

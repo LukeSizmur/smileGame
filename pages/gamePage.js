@@ -7,7 +7,6 @@ export default function gamePage() {
     return (
         <div className={styles.container}>
             <GamePageMain />
-            <GamePageLeaderboard />
         </div>
     )
 }

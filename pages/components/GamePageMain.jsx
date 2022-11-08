@@ -21,8 +21,9 @@ export default function GamePageMain() {
                 <p>The aim of the game is to find the missing number within the
                     sequence on the board. <br></br> The number is hidden under an emoji.
                 </p>
-                <button className=' rounded-sm bg-white w-24 m-2 inline'>Let's Go!</button>
+                <button className=' rounded-sm bg-white w-24 m-2 inline hover:bg-blue-500 hover:text-white'>Let's Go!</button>
                 <button className=' rounded-sm bg-white w-24 m-2 inline'>Read More</button>
+                <button className=' rounded-sm bg-white w-24 m-2 font-bold mt-72 block hover:bg-red-600 hover:text-white'>Sign Out</button>
             </section>
             </div>
             {/* column 2 */}

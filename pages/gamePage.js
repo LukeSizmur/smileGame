@@ -1,12 +1,12 @@
 import React from 'react'
-import Navbar from './components/Navbar'
+import GamePageMain from './components/GamePageMain'
 import styles from '../styles/gamePage.module.css'
+import GamePageLeaderboard from './components/GamePageLeaderboard'
 
 export default function gamePage() {
     return (
         <div className={styles.container}>
-            <Navbar />
-            <h1 className=" text-center text-2xl text-teal-700">Game Page</h1>
+            <GamePageMain />
         </div>
     )
 }

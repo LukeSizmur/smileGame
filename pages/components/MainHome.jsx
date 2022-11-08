@@ -24,7 +24,7 @@ export default function MainHome() {
                     <p>The aim of the game is to find the missing number (it will only be a single digit)
                     within the sequence on the board. The number
                     is hidden under an emoji. Below is an example:</p>
-                    <Image src='/assets/emojiBackground.jpg' alt='example of the game' width={200} height={200} className=' mr-auto ml-auto mt-3'/>
+                    <Image src='/exampleImage.png' alt='example of the game' width={300} height={300} className=' mr-auto ml-auto mt-3'/>
                     <Link href="/gamePage">
                         <button className=' rounded-2xl
                         bg-gradient-to-r from-orange-500 to-purple-500 

@@ -1,6 +1,6 @@
 .container {
   padding: 0 2rem;
-  background: url(../assets/emojiBackground.jpg);
+  background: url('../assets/emojiBackground.jpg');
   background-size: cover;
   color: black;
   height: 100vh;

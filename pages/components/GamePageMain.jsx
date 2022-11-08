@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import Link from 'next/link';
 import GamePageLeaderboard from './GamePageLeaderboard';
 
 export default function GamePageMain() {
@@ -21,15 +22,17 @@ export default function GamePageMain() {
                 <p>The aim of the game is to find the missing number within the
                     sequence on the board. <br></br> The number is hidden under an emoji.
                 </p>
-                <button className=' rounded-sm bg-white w-24 m-2 inline hover:bg-blue-500 hover:text-white'>Let's Go!</button>
-                <button className=' rounded-sm bg-white w-24 m-2 inline'>Read More</button>
-                <button className=' rounded-sm bg-white w-24 m-2 font-bold mt-72 block hover:bg-red-600 hover:text-white'>Sign Out</button>
+                <Link href="/boardPage">
+                    <button className=' rounded-sm bg-white w-24 m-2 inline duration-300 border-2 border-blue-400 hover:bg-blue-400 hover:text-white '>Let's Go!</button>
+                </Link>
+                <button className=' rounded-sm bg-white w-24 m-2 inline duration-300 hover:bg-black hover:text-white border-2 border-black'>Read More</button>
+                <button className=' rounded-sm bg-white w-24 m-2 font-bold mt-72 block border-2 border-red-500 hover:bg-red-500 hover:text-white duration-300'>Sign Out</button>
             </section>
             </div>
             {/* column 2 */}
             <div>
-                <section className=' pt-72 pl-32'>
-                    <Image src="/partying_face_3d.png" alt="Party Emoji" width={200} height={200} />
+                <section className=' pt-72'>
+                    <Image src="/partying_face_3d-Enhanced.png" alt="Party Emoji" width={400} height={200} />
                 </section>
             </div>
             {/* column 3 */}

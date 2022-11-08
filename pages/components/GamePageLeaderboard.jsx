@@ -9,7 +9,15 @@ export default function GamePageLeaderboard() {
                 <div>
                     <p>Placeholder text</p>
                 </div>
-                <button className=' rounded-sm bg-blue-400 w-24 m-2'>Refresh</button>
+                <button className='rounded-sm
+                 w-24 
+                 m-2 
+                 drop-shadow-md              
+                 duration-300 
+                 border-2
+                 border-blue-400
+                 hover:bg-blue-400
+                 hover:text-white'>Refresh</button>
             </section>
         </div>  
        

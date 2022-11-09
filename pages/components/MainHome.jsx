@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function MainHome() {
     return (
         <div className="Container">
-                <div className='bg-white p-5 rounded-xl drop-shadow-2xl h-98 mt-48'>
+                <div className='bg-white p-5 rounded-xl drop-shadow-2xl h-98 mt-20 lg:mt-48'>
                     <h1 className='text-3xl font-bold text-center '>Welcome to the Smile Game</h1>
                     <h4 className='p-4 
                     text-center 

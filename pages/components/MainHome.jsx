@@ -25,15 +25,18 @@ export default function MainHome() {
                     within the sequence on the board. The number
                     is hidden under an emoji. Below is an example:</p>
                     <Image src='/exampleImage.png' alt='example of the game' width={300} height={300} className=' mr-auto ml-auto mt-3'/>
-                    <Link href="/gamePage">
-                        <button className=' rounded-2xl
-                        bg-gradient-to-r from-orange-500 to-purple-500 
-                        w-20 
-                        text-white 
-                        text-2xl 
-                        font-bold
-                        hover:drop-shadow-md'>PLAY</button>
-                    </Link>
+                    <div className=' text-center mt-4'>
+                        <Link href="/gamePage">
+                            <button className=' rounded-2xl
+                            bg-gradient-to-r from-orange-500 to-purple-500 
+                            w-20 
+                            text-white 
+                            text-2xl 
+                            font-bold
+                            hover:drop-shadow-md'>PLAY</button>
+                        </Link>
+                    </div>
+                    
                 </div>
         </div>
         

@@ -25,10 +25,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/boardPage": [
+    "/gamePage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/boardPage.js"
+      "static/chunks/pages/gamePage.js"
     ]
   },
   "ampFirstPages": []

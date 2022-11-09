@@ -3,9 +3,9 @@ import React from 'react'
 export default function GamePageLeaderboard() {
     return (
         <div>
-            <section className=' bg-white text-center h-screen pt-5'>
+            <section className=' bg-white text-center h-screen pt-5 mt-24 lg:mt-0'>
                 <h1 className=' font-bold text-4xl'>Leaderboard</h1>
-                <p className=' opacity-60'>number of questions answered</p>
+                <p className=' font-light'>number of questions answered</p>
                 <div>
                     <p>Placeholder text</p>
                 </div>

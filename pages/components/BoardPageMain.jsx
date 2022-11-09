@@ -7,28 +7,29 @@ import BoardPageApi from './BoardPageApi';
 export default function BoardPageMain() {
     return (
         // TODO: change the hard coded username
-        <div className=' grid gap-4 grid-cols-3 grid-rows-3 pt-48'>
+        // grid gap-4 grid-cols-3 grid-rows-3
+        <div className=' md:grid md:gap-4 md:grid-cols-3 md:grid-rows-3 '>
             {/* column 1 */}
             <div className='text-center'>
-                <section>
-                    
+                <section>  
+            
                 </section>
             </div>
             {/* column 2 */}
             <div>
                 <section className='text-center '>
                     {/* TODO: add the image from the API */}
-                    <h1 className=' text-5xl font-bold pt-10 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-pink-600'>Your Question</h1>
+                    <h1 className=' text-5xl font-bold pt-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600'>Your Question</h1>
                 </section>
             </div>
             {/* column 3 */}
             <div className='text-center'>
-                {/* TODO: Use variables for username and questions answered */}
-                <h1 className=' text-4xl font-bold pt-10'>xszmr Total: 32</h1>
+                {/* TODO: Use variables questions answered */}
+                <h1 className=' text-3xl font-bold pt-5'>Your Total: 36</h1>
             </div>
 
             {/* column 1 */}
-            <div className='text-center'>
+            <div className='text-center pt-10'>
                 <section>
                     <h1 className=' text-left text-2xl font-bold'>Info:</h1>
                     <p className=' text-left'>Upon completing the question a new one will automatically generate.
@@ -37,7 +38,7 @@ export default function BoardPageMain() {
             </div>
             {/* column 2 */}
             <div>
-                <section className='text-center '>
+                <section className='text-center pt-10'>
                     {/* TODO: add the image from the API */}
                     <h1>PLACE IMAGE HERE</h1>
                     <BoardPageApi />
@@ -49,12 +50,12 @@ export default function BoardPageMain() {
             </div>
 
             {/* column 1 */}
-            <div className='text-center'>
+            <div className='text-center '>
                 
             </div>
             {/* column 2 */}
-            <div>
-                <section className='text-center '>
+            <div className=''>
+                <section className='text-center pt-20'>
                     <BoardPageButton />
                 </section>
             </div>

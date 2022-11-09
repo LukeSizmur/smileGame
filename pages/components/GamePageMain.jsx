@@ -82,7 +82,8 @@ export default function GamePageMain() {
                     text-2xl 
                     text-white 
                     animate-bounce 
-                    mt-24 
+                    mt-14
+                    mb-6 
                     lg:invisible'>&#8595;</button>
 
                 </section>

@@ -22,13 +22,26 @@ export default function GamePageMain() {
                 bg-gradient-to-r from-purple-500 to-pink-600'>Welcome, xszmr</h1>
 
                 <p>Today's Date is {date}</p>
-                <section className=' pt-10'>
-                <h1 className=' text-4xl font-bold'>Start Playing</h1>
-                <h3 className=' font-bold'>The Rules:</h3>
-                <p>The aim of the game is to find the missing number within the
-                    sequence on the board. <br></br> The number is hidden under an emoji.
-                </p>
-                <Link href="/boardPage">
+                <section className=' pt-10 lg:pt-36'>
+                    <h1 className=' text-4xl font-bold lg:pb-5'>Start Playing</h1>
+                    <h3 className=' font-bold lg:text-xl'>The Rules:</h3>
+                    <p className=' text-lg'>The aim of the game is to find the missing number within the
+                        sequence on the board. <br></br> The number is hidden under an emoji.
+                    </p>
+                    <Link href="/boardPage">
+                        <button className=' 
+                        rounded-sm 
+                        bg-white 
+                        w-24 
+                        m-2 
+                        inline 
+                        duration-300 
+                        border-2 
+                        border-blue-400 
+                        hover:bg-blue-400 
+                        hover:text-white '>Let's Go!</button>
+                    </Link>
+
                     <button className=' 
                     rounded-sm 
                     bg-white 
@@ -36,43 +49,30 @@ export default function GamePageMain() {
                     m-2 
                     inline 
                     duration-300 
+                    hover:bg-black 
+                    hover:text-white border-2 
+                    border-black'>Read More</button>
+
+                    <button className=' 
+                    rounded-sm 
+                    bg-white 
+                    w-24 
+                    m-2 
+                    font-bold 
+                    lg:mt-72 
+                    block 
                     border-2 
-                    border-blue-400 
-                    hover:bg-blue-400 
-                    hover:text-white '>Let's Go!</button>
-                </Link>
+                    border-red-500 
+                    hover:bg-red-500 
+                    hover:text-white 
+                    duration-300'>Sign Out</button>
 
-                <button className=' 
-                rounded-sm 
-                bg-white 
-                w-24 
-                m-2 
-                inline 
-                duration-300 
-                hover:bg-black 
-                hover:text-white border-2 
-                border-black'>Read More</button>
-
-                <button className=' 
-                rounded-sm 
-                bg-white 
-                w-24 
-                m-2 
-                font-bold 
-                lg:mt-72 
-                block 
-                border-2 
-                border-red-500 
-                hover:bg-red-500 
-                hover:text-white 
-                duration-300'>Sign Out</button>
-
-            </section>
+                </section>
             </div>
             {/* column 2 */}
             <div>
                 <section className=' text-center'>
-                    <Image src="/partying_face_3d-Enhanced.png" alt="Party Emoji" width={200} height={200} className=' mr-auto ml-auto mt-5' />
+                    <Image src="/partying_face_3d-Enhanced.png" alt="Party Emoji" width={200} height={200} className=' mr-auto ml-auto mt-5 lg:mt-72 lg:w-80' />
                     {/* this render a down arrow which is only visible on small devices (below 768px) */}
                     <button className=' 
                     rounded-full 
@@ -82,7 +82,7 @@ export default function GamePageMain() {
                     text-2xl 
                     text-white 
                     animate-bounce 
-                    mt-14
+                    mt-10
                     mb-6 
                     lg:invisible'>&#8595;</button>
 

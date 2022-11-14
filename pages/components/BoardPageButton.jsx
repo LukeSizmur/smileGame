@@ -5,7 +5,7 @@ export default function BoardPageButton() {
     return (
         <div>
             {buttons.map(button => (
-                <button className=" p-3 m-1 bg-white rounded-md font-bold text-3xl hover:drop-shadow-lg">{button}</button>
+                <button key={button} className=" p-3 m-1 bg-white rounded-md font-bold text-3xl hover:drop-shadow-lg">{button}</button>
             ))}
         </div>
     )

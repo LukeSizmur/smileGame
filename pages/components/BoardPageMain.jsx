@@ -41,6 +41,15 @@ export default function BoardPageMain() {
                 <section className='text-center pt-10'>
                     {/* TODO: add the image from the API */}
                     <h1>PLACE IMAGE HERE</h1>
+                    <button className='rounded-sm
+                    w-24 
+                    mt-20 
+                    drop-shadow-md              
+                    duration-300 
+                    border-2
+                    border-blue-400
+                    hover:bg-blue-400
+                    hover:text-white'>Refresh</button>
                     <BoardPageApi />
                 </section>
             </div>

@@ -25,6 +25,11 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/boardPage": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/boardPage.js"
+    ],
     "/gamePage": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

@@ -31,7 +31,7 @@ export default function BoardPageMain() {
 
         setLoading(true)
  
-         fetch('http://marcconrad.com/uob/smile/api')
+         fetch('https://marcconrad.com/uob/smile/api')
              .then(res => {
                  return res.json()
              })

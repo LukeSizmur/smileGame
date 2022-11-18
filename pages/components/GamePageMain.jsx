@@ -24,7 +24,7 @@ const GamePageMain = () => {
                 font-bold 
                 text-transparent 
                 bg-clip-text 
-                bg-gradient-to-r from-purple-500 to-pink-600'>Welcome, xszmr</h1>
+                bg-gradient-to-r from-purple-500 to-pink-600'>Welcome, user</h1>
 
                 <p>Today's Date is {date}</p>
                 <section className=' pt-10 lg:pt-36'>

@@ -59,9 +59,11 @@ export default function BoardPageMain() {
         if (userSelectedAnswer === solution) {
             alert("Correct!")
             setGameStateCorrect(true)
+            document.getElementById("answerForm").reset()
             console.log("game state inside true statement",gameStateCorrect)
         } else {
             alert("Try again!")
+            document.getElementById("answerForm").reset()
         }
 
      };
@@ -139,7 +141,7 @@ export default function BoardPageMain() {
                 <div className=''>
                     <section className='text-center pt-10'>
                         {/* <BoardPageButton /> */}
-                        <form>
+                        <form id="answerForm">
                             <input placeholder="Enter your answer" type="number" name="userAnswer" className="p-1 pl-2 rounded-full text-2xl dark:text-white" onChange={handleChange} ></input>
                         </form>
                     </section>

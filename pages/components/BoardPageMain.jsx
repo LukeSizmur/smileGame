@@ -3,16 +3,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import BoardPageButton from './BoardPageButton'
 import QuestionPanel from './QuestionPanel';
-import {toast} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 // this a method needed for the toast notification
 
 
 export default function BoardPageMain() {
      // sets a default state
-     const [gameState, setGameState] = useState(null);
+     const [gameStateCorrect, setGameStateCorrect] = useState(false);
     //  this sets the deafult loading state
-     const [loading, setLoading] = useState(false);
+     const [isLoading, setisLoading] = useState(false);
     //  this sets the question state
      const [question, setQuestion] = useState(null);
     //  this sets the answer to the question
@@ -22,14 +21,20 @@ export default function BoardPageMain() {
     //  this then takes the final answer when the button 'Submit Answer' is clicked
      const [updatedUserAnswer, setUpdatedUserAnswer] = useState(userSelectedAnswer);
 
-     const buttons = [1, 2, 3, 4, 5, 6, 7, 8, 9];
  
      useEffect(() => {
          // updates the loading state
          console.log("use effect")
         //  if it is loading then do not refresh or if it has a question
 
-        setLoading(true)
+        
+        if (isLoading) {
+            return
+        }
+
+        setisLoading(true);
+
+        console.log("loading state=", isLoading);  
  
          fetch('https://marcconrad.com/uob/smile/api')
              .then(res => {
@@ -41,25 +46,23 @@ export default function BoardPageMain() {
                  setQuestion(question)
                  setSolution(solution)
                  console.log(solution)
+                 console.log(gameStateCorrect)
              })
-             .finally(setLoading(false))
+             .finally(setisLoading(false), setGameStateCorrect(false))
 
-         
-
-         
-     }, []);
+     }, [gameStateCorrect]);
 
      const checkAnswer = () => {
         setUpdatedUserAnswer(userSelectedAnswer)
         console.log("User's choice =",userSelectedAnswer)
 
         if (userSelectedAnswer === solution) {
-            // console.log("It is the same!", userSelectedAnswer, solution)
-            alert("Correct Answer!")
+            alert("Correct!")
+            setGameStateCorrect(true)
+            console.log("game state inside true statement",gameStateCorrect)
         } else {
             alert("Try again!")
         }
-
 
      };
 
@@ -82,7 +85,13 @@ export default function BoardPageMain() {
                 <div>
                     <section className='text-center '>
                         {/* TODO: add the image from the API */}
-                        <h1 className=' text-5xl font-bold pt-10 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-600'>Your Question</h1>
+                        <h1 className=' text-5xl 
+                        font-bold 
+                        pt-10 
+                        lg:pt-5 
+                        text-transparent 
+                        bg-clip-text 
+                        bg-gradient-to-r from-purple-500 to-pink-600'>Your Question</h1>
                     </section>
                 </div>
                 {/* column 3 */}
@@ -102,8 +111,8 @@ export default function BoardPageMain() {
                 </div>
                 {/* column 2 */}
                 <div className=" text-center flex justify-center">
-                    <section className=' pt-10'>
-                        {loading ? <img src="/LoadingSVG.svg" width="50"></img> : <QuestionPanel question={question}/> }
+                    <section className=' pt-10 lg:pt-0 '>
+                        {isLoading ? <img src="/LoadingSVG.svg" width="50"></img> : <QuestionPanel question={question}/> }
                         <button className='rounded-sm
                         w-36
                         text-xl 
@@ -118,38 +127,25 @@ export default function BoardPageMain() {
                     </section>
                 </div>
                 {/* column 3 */}
-                <div className='text-center'>
+                <div className='text-center '>
                     
                 </div>
 
                 {/* column 1 */}
-                <div className='text-center '>
+                <div className='text-center lg:h-20'>
                     
                 </div>
                 {/* column 2 */}
                 <div className=''>
                     <section className='text-center pt-10'>
                         {/* <BoardPageButton /> */}
-
-                        <input placeholder="Enter your answer" type="number" name="userAnswer" className="p-1 rounded-2xl text-2xl" onChange={handleChange} ></input>
-                        
-                        {/* {buttons.map(button => (
-                            <button key={button} className=" 
-                            p-3 
-                            m-1 
-                            bg-white 
-                            rounded-md 
-                            font-bold 
-                            text-3xl 
-                            hover:drop-shadow-lg 
-                            focus:outline-none 
-                            focus:ring 
-                            focus:ring-pink-500" value={1}>{button}</button>
-                        ))} */}
+                        <form>
+                            <input placeholder="Enter your answer" type="number" name="userAnswer" className="p-1 pl-2 rounded-full text-2xl dark:text-white" onChange={handleChange} ></input>
+                        </form>
                     </section>
                 </div>
                 {/* column 3 */}
-                <div className='text-center'>
+                <div className='text-center lg:h-20'>
                     
                 </div>
             </div>

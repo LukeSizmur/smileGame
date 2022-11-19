@@ -65,7 +65,7 @@ const GamePageMain = () => {
                     w-24 
                     m-2 
                     font-bold 
-                    lg:mt-72 
+                    lg:mt-64 
                     block 
                     border-2 
                     border-red-500 

@@ -1,6 +1,4 @@
 import React, {useState, useEffect, useRef} from 'react'
-import Image from 'next/image';
-import Link from 'next/link';
 import BoardPageButton from './BoardPageButton'
 import QuestionPanel from './QuestionPanel';
 
@@ -26,7 +24,6 @@ export default function BoardPageMain() {
          // updates the loading state
          console.log("use effect")
         //  if it is loading then do not refresh or if it has a question
-
         
         if (isLoading) {
             return
@@ -99,7 +96,7 @@ export default function BoardPageMain() {
                 {/* column 3 */}
                 <div className='text-center'>
                     {/* TODO: Use variables questions answered */}
-                    <h1 className=' text-3xl font-bold pt-5'>Your Total: </h1>
+                    <h1 className=' text-3xl font-bold pt-5' id="userTotalText">Your Total: </h1>
                 </div>
 
                 {/* column 1 */}

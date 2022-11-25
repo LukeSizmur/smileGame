@@ -72,7 +72,7 @@ export default function BoardPageMain() {
     return (
         // TODO: change the hard coded username
         // grid gap-4 grid-cols-3 grid-rows-3
-        <div className=" h-screen">
+        <div className=" ">
             <div className=' md:grid md:gap-4 md:grid-cols-3 md:grid-rows-3 '>
                 {/* column 1 */}
                 <div className='text-center'>

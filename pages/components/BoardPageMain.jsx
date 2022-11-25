@@ -72,7 +72,7 @@ export default function BoardPageMain() {
     return (
         // TODO: change the hard coded username
         // grid gap-4 grid-cols-3 grid-rows-3
-        <div className=" ">
+        <div className=" h-screen">
             <div className=' md:grid md:gap-4 md:grid-cols-3 md:grid-rows-3 '>
                 {/* column 1 */}
                 <div className='text-center'>
@@ -139,7 +139,7 @@ export default function BoardPageMain() {
                     <section className='text-center pt-10'>
                         {/* <BoardPageButton /> */}
                         <form id="answerForm">
-                            <input placeholder="Enter your answer" type="number" name="userAnswer" className="p-1 pl-2 rounded-full text-2xl dark:text-white" onChange={handleChange} ></input>
+                            <input placeholder="Enter your answer" type="number" name="userAnswer" className="p-1 w-4/6 pl-2 rounded-full text-2xl dark:text-white" onChange={handleChange} ></input>
                         </form>
                     </section>
                 </div>

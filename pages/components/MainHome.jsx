@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import LoginButton from '../components/LoginButton';
 
 export default function MainHome() {
     return (
@@ -26,15 +27,17 @@ export default function MainHome() {
                     is hidden under an emoji. Below is an example:</p>
                     <Image src='/exampleImage.png' alt='example of the game' width={300} height={300} className=' mr-auto ml-auto mt-3'/>
                     <div className=' text-center mt-4'>
-                        <Link href="/gamePage">
-                            <button className=' rounded-2xl
+                        {/* <Link href="/gamePage"> */}
+                            {/* <button className=' rounded-2xl
                             bg-gradient-to-r from-orange-500 to-purple-500 
                             w-20 
                             text-white 
                             text-2xl 
                             font-bold
-                            hover:drop-shadow-md'>PLAY</button>
-                        </Link>
+                            hover:drop-shadow-md'>PLAY</button> */}
+                            <LoginButton />
+                            
+                        {/* </Link> */}
                     </div>
                     
                 </div>

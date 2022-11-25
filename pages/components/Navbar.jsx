@@ -1,10 +1,11 @@
 import React from 'react';
+import LoginButton from '../components/LoginButton';
 
 export default function Navbar() {
     return (
         <div className="Navbar flex p-1">
             <h2 className="font-bold text-xl mr-auto mt-5">Smile Game</h2>
-            <button className="
+            {/* <button className="
             rounded-full 
             px-5
             py-1
@@ -12,7 +13,8 @@ export default function Navbar() {
             text-white 
             text-lg
             mt-5
-            hover:drop-shadow-md">Login</button>
+            hover:drop-shadow-md">Login</button> */}
+            {/* <LoginButton /> */}
         </div>
     )
 }

@@ -9,7 +9,7 @@ export default function BoardPageMain() {
      // sets a default state
      const [gameStateCorrect, setGameStateCorrect] = useState(false);
     //  this sets the deafult loading state
-     const [isLoading, setisLoading] = useState(false);
+     const [isLoading, setIsLoading] = useState(false);
     //  this sets the question state
      const [question, setQuestion] = useState(null);
     //  this sets the answer to the question
@@ -29,23 +29,23 @@ export default function BoardPageMain() {
             return
         }
 
-        setisLoading(true);
+        setIsLoading(true);
 
-        console.log("loading state=", isLoading);  
+        console.log("Loading state =",isLoading)
  
-         fetch('https://marcconrad.com/uob/smile/api')
-             .then(res => {
-                 return res.json()
-             })
-             .then((data) => {
-                 console.log(data)
-                 const {question, solution} = data
-                 setQuestion(question)
-                 setSolution(solution)
-                 console.log(solution)
-                 console.log(gameStateCorrect)
-             })
-             .finally(setisLoading(false), setGameStateCorrect(false))
+        fetch('https://marcconrad.com/uob/smile/api')
+            .then(res => {
+                return res.json()
+            })
+            .then((data) => {
+                console.log(data)
+                const {question, solution} = data
+                setQuestion(question)
+                setSolution(solution)
+                console.log(solution)
+                console.log("Game state = ",gameStateCorrect)
+            })
+            .finally(setIsLoading(false), setGameStateCorrect(false))
 
      }, [gameStateCorrect]);
 
@@ -83,7 +83,6 @@ export default function BoardPageMain() {
                 {/* column 2 */}
                 <div>
                     <section className='text-center '>
-                        {/* TODO: add the image from the API */}
                         <h1 className=' text-5xl 
                         font-bold 
                         pt-10 
@@ -111,7 +110,7 @@ export default function BoardPageMain() {
                 {/* column 2 */}
                 <div className=" text-center flex justify-center">
                     <section className=' pt-10 lg:pt-0 '>
-                        {isLoading ? <img src="/LoadingSVG.svg" width="50"></img> : <QuestionPanel question={question}/> }
+                        {isLoading ? <img src="/LoadingSVG.svg" width="140"></img> : <QuestionPanel question={question}/> }
                         <button className='rounded-sm
                         w-36
                         text-xl 
@@ -127,7 +126,7 @@ export default function BoardPageMain() {
                 </div>
                 {/* column 3 */}
                 <div className='text-center '>
-                    
+
                 </div>
 
                 {/* column 1 */}

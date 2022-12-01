@@ -139,7 +139,7 @@ export default function BoardPageMain() {
                     <section className='text-center pt-10'>
                         {/* <BoardPageButton /> */}
                         <form id="answerForm">
-                            <input placeholder="Enter your answer" type="number" name="userAnswer" className="p-1 pl-2 rounded-full text-2xl dark:text-white" onChange={handleChange} ></input>
+                            <input placeholder="Enter your answer" type="number" name="userAnswer" className="p-1 w-4/6 pl-2 rounded-full text-2xl dark:text-white" onChange={handleChange} ></input>
                         </form>
                     </section>
                 </div>

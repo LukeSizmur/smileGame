@@ -2,8 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import LoginButton from '../components/LoginButton';
+import { useSession, signOut } from 'next-auth/react';
 
 export default function MainHome() {
+    const {data:session} = useSession()
+
     return (
         <div className="Container">
                 <div className='bg-white p-5 rounded-xl drop-shadow-2xl h-98 mt-20 lg:mt-48'>
@@ -35,9 +38,15 @@ export default function MainHome() {
                             text-2xl 
                             font-bold
                             hover:drop-shadow-md'>PLAY</button> */}
-                            <LoginButton />
+                            {/* <LoginButton /> */}
                             
                         {/* </Link> */}
+                        {!session && <LoginButton />}
+                        {session && 
+                        <Link href="/gamePage">
+                            <button className=" rounded-2xl bg-gradient-to-r from-orange-500 to-purple-500 w-20 text-white text-2xl font-bold hover:drop-shadow-lg">PLAY</button>
+                        </Link>}
+
                     </div>
                     
                 </div>

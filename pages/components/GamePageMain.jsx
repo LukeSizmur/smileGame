@@ -2,8 +2,12 @@ import React, {useState, useRef} from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import GamePageLeaderboard from './GamePageLeaderboard';
+import { useSession, signOut } from 'next-auth/react';
 
 const GamePageMain = () => {
+    const {data:session} = useSession()
+    
+    console.log(session)
     // this gets the current date from the built in Date method
     const current = new Date();
     // then it is formatted by seperating each one by a /
@@ -24,7 +28,7 @@ const GamePageMain = () => {
                 font-bold 
                 text-transparent 
                 bg-clip-text 
-                bg-gradient-to-r from-purple-500 to-pink-600'>Welcome, user</h1>
+                bg-gradient-to-r from-purple-500 to-pink-600'>Welcome, {session.user.name}</h1>
 
                 <p>Today's Date is {date}</p>
                 <section className=' pt-10 lg:pt-36'>

@@ -6,6 +6,8 @@ import { useSession, signOut } from 'next-auth/react';
 
 const GamePageMain = () => {
     const {data:session} = useSession()
+    
+    console.log(session)
     // this gets the current date from the built in Date method
     const current = new Date();
     // then it is formatted by seperating each one by a /

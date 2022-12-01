@@ -9,7 +9,7 @@ export default function Component() {
             py-1
             bg-gradient-to-r from-purple-500 to-pink-500 
             text-white 
-            text-lg
+            text-2xl
             mt-5
             hover:drop-shadow-md" onClick={() => signIn()}>Sign in</button>
     </>

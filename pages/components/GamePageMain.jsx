@@ -24,7 +24,7 @@ const GamePageMain = () => {
             {/* column 1 */}
             <div className=' pt-5'>
 
-                <h1 className=' text-6xl 
+                <h1 className=' text-5xl 
                 font-bold 
                 text-transparent 
                 bg-clip-text 
@@ -75,7 +75,7 @@ const GamePageMain = () => {
                     border-red-500 
                     hover:bg-red-500 
                     hover:text-white 
-                    duration-300'>Sign Out</button>
+                    duration-300' onClick={() => signOut({callbackUrl: `${window.location.origin}`})}>Sign Out</button>
 
                 </section>
             </div>

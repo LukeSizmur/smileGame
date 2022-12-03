@@ -147,7 +147,7 @@ const GamePageMain = () => {
                     text-white 
                     animate-bounce 
                     mt-5
-                    mb-6
+                    mb-10
                     z-0 
                     lg:invisible'
                     onClick={executeScroll}>&#8595;</button>

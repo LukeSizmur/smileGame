@@ -1,7 +1,8 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 import GamePageLeaderboard from './GamePageLeaderboard';
+import LoadingUsername from './LoadingUsername';
 import { useSession, signOut } from 'next-auth/react';
 
 const GamePageMain = () => {
@@ -17,6 +18,17 @@ const GamePageMain = () => {
     const executeScroll = () => leaderBoard.current.scrollIntoView() 
 
     const [showModal, setShowModal] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
+
+    useEffect(() => {
+        console.log("use effect ran - gamePageMain")
+
+        if (!session) {
+            setIsLoading(true)
+        } else {
+            setIsLoading(false)
+        }
+    }, [])
 
     return (
         // TODO: change the hard coded username
@@ -28,7 +40,7 @@ const GamePageMain = () => {
                 font-bold 
                 text-transparent 
                 bg-clip-text 
-                bg-gradient-to-r from-purple-500 to-pink-600'>Welcome, {session.user.name}</h1>
+                bg-gradient-to-r from-purple-500 to-pink-600'>Welcome, {isLoading ? <p>loading username</p> : <LoadingUsername />}</h1>
 
                 <p>Today's Date is {date}</p>
                 <section className=' pt-10 lg:pt-36'>
